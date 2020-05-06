@@ -1,6 +1,6 @@
 # Site
 repository: kitchensjn/kitchensjn.github.io
-favicon: images/favicon.ico
+favicon: favicon.ico
 
 # Personal info
 name: James Kitchens
@@ -43,7 +43,7 @@ additional_links:
 
 # About Section
 # about_title: About Me (Use this to override about section title)
-about_profile_image: images/profilePicture.jpg
+about_profile_image: profilePicture.jpg
 about_content: | # this will include new lines to allow paragraphs
   Hi, my name is James. I am a recent graduate of Warren Wilson College in Asheville, North Carolina, where I graduated with Honors, earning a BS in Biology and a BS in Chemistry. Throughout college and high school, I developed interests and skills in conservation genetics, human genomics, and statistical modeling. I enjoy creative programming and data visualizations, including developing applications in <mark>Python</mark> and <mark>Shiny</mark>.
   
