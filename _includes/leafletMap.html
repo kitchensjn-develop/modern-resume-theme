@@ -57,7 +57,7 @@
     
   var unhighlightedIcon = L.Icon.extend({
     options: {
-        iconUrl: "../NationalParksGallery/library/leaflet/images/marker-icon.png",
+        iconUrl: "{{ '/assets/NationalParksGallery/library/leaflet/images/marker-icon.png' | relative_url }}",
   	iconAnchor: [12, 41],
   	iconSize: [25, 41]
     }
@@ -65,7 +65,7 @@
     
   var highlightedIcon = L.Icon.extend({
   options: {
-  	iconUrl: "../NationalParksGallery/library/leaflet/images/marker-icon-lightblue.png",
+  	iconUrl: "{{ '/assets/NationalParksGallery/library/leaflet/images/marker-icon-lightblue.png' | relative_url }}",
   	iconAnchor: [12, 41],
   	iconSize: [25, 41]
   }
@@ -73,7 +73,7 @@
   
   var otherIcon = L.Icon.extend({
   options: {
-  	iconUrl: "../NationalParksGallery/library/leaflet/images/marker-icon-other.png",
+  	iconUrl: "{{ '/assets/NationalParksGallery/library/leaflet/images/marker-icon-other.png' | relative_url }}",
   	iconAnchor: [12, 41],
   	iconSize: [25, 41]
   }
