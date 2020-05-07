@@ -1,7 +1,4 @@
 ---
-layout: default
-title: About
+layout: national-parks-gallery
+title: National Parks Gallery
 ---
-# About page
-
-This page tells you a little bit about me.
