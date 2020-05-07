@@ -183,3 +183,11 @@ p.quote {
     margin-top: 1rem;
   }
 }
+
+.navbar-custom { 
+  background-color: lightgreen; 
+} 
+.navbar-custom .navbar-brand, 
+.navbar-custom .navbar-text { 
+    color: green; 
+} 
