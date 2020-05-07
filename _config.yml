@@ -9,7 +9,7 @@ email: kitchensjn@gmail.com
 website: www.james-kitchens.com
 
 # Dark Mode (true/false/never)
-darkmode: true
+darkmode: never
 
 # Social links
 #twitter_username: jekyllrb
