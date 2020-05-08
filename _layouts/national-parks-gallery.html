@@ -9,12 +9,20 @@
   
 <body class="{% if site.darkmode == true and site.darkmode != 'never' %}dark{% endif %}">
 
-  {%- include navbar.html -%}
+  <div id="outer">
   
-  {%- include leafletMap.html -%}
-  
-  {%- include gallery.html -%}
-  
+    {%- include navbar.html -%}
+
+    <div id="inner">
+    
+      {%- include leafletMap.html -%}
+
+      {%- include gallery.html -%}
+    
+    </div>
+
+  </div>  
+    
 </body>
 
 </html>
