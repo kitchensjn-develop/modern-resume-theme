@@ -5,11 +5,6 @@
     right: 0;
     top: 0;
   }
-
-  i:focus {
-    background-color: #fff;
-    color: #333;
-  }
   
   .nav li.horizontal-page a.hpage {
     padding: 10px; 
@@ -87,11 +82,13 @@
 
 <script>
   function myFunction() {
-    var ham = document.getElementById("ham")
+    var ham = document.getElementById("ham");
     if (ham.style.color == "#fff") {
-      ham.style.color = #BBBBBB;
+      console.log("fff");
+      //ham.style.color = #BBBBBB;
     } else {
-      ham.style.color = "fff";
+      console.log("BBB");
+      //ham.style.color = "fff";
     }
     var x = document.getElementById("vertical");
     if (x.style.display === "block") {
