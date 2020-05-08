@@ -9,14 +9,18 @@
   
 <body class="{% if site.darkmode == true and site.darkmode != 'never' %}dark{% endif %}">
   
-    {%- include navbar.html -%}
-  
-    <div class="galleryContent" style="display: flex; flex-flow: column; height: 100%;">     <!--position: absolute; top: 50px; bottom: 0; width: 100%; z-index: -1;">-->
+    <div style="display: flex; flex-flow: column; height: 100%;">
     
-      {%- include leafletMap.html -%}
+      {%- include navbar.html -%}
 
-      {%- include gallery.html -%}
-      
+      <div class="galleryContent" style="flex-grow: 1;">     <!--position: absolute; top: 50px; bottom: 0; width: 100%; z-index: -1;">-->
+
+        {%- include leafletMap.html -%}
+
+        {%- include gallery.html -%}
+
+      </div>
+  
     </div>
     
 </body>
