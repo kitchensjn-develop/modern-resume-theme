@@ -1,6 +1,6 @@
 # Site
 repository: kitchensjn/kitchensjn.github.io
-favicon: {{ '/assets/favicon.ico' | relative_url }}
+favicon: favicon.ico
 
 # Personal info
 name: James Kitchens
