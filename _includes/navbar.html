@@ -4,7 +4,7 @@
   }
 
   @media screen and (max-width: 768px) {
-    .nav a.page {display: none;}
+    .nav a.horizontal-page {display: none;}
     .nav a.icon {
       float: right;
       display: block;
@@ -24,6 +24,10 @@
       text-align: left;
     }
   }
+  
+  .topnav #vertical {
+    display: none;
+  }
 </style>  
 
 <nav class="navbar navbar-inverse" style="margin: 0px; border-radius: 0px;">
@@ -34,11 +38,17 @@
     </div>
     -->
     <ul class="nav navbar-nav navbar-left">
-      <li><a class="page" href="https://kitchensjn-develop.github.io/modern-resume-theme/">ABOUT</a></li> <!-- class="active"-->
-      <li><a class="page" href="#">PROJECTS</a></li>
-      <li><a class="page" href="https://kitchensjn-develop.github.io/modern-resume-theme/national-parks-gallery">NATIONAL PARKS GALLERY</a></li>
-      <li><a class="page" href=#">CONTACT</a></li>
+      <li><a class="horizontal-page" href="https://kitchensjn-develop.github.io/modern-resume-theme/">ABOUT</a></li> <!-- class="active"-->
+      <li><a class="horizontal-page" href="#">PROJECTS</a></li>
+      <li><a class="horizontal-page" href="https://kitchensjn-develop.github.io/modern-resume-theme/national-parks-gallery">NATIONAL PARKS GALLERY</a></li>
+      <li><a class="horizontal-page" href=#">CONTACT</a></li>
       <li><a href="javascript:void(0);" class="icon" onclick="myFunction()"><i class="fa fa-bars"></i></a></li>
     </ul>
+    <div id="vertical">
+      <a class="vertical-page" href="https://kitchensjn-develop.github.io/modern-resume-theme/">ABOUT</a>
+      <a class="vertical-page" href="#">PROJECTS</a>
+      <a class="vertical-page" href="https://kitchensjn-develop.github.io/modern-resume-theme/national-parks-gallery">NATIONAL PARKS GALLERY</a>
+      <a class="vertical-page" href=#">CONTACT</a>
+    </div>
   </div>
 </nav>
