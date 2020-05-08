@@ -8,20 +8,12 @@
 </head>
   
 <body class="{% if site.darkmode == true and site.darkmode != 'never' %}dark{% endif %}">
-
-  <div id="outer">
   
     {%- include navbar.html -%}
-
-    <div id="inner">
     
-      {%- include leafletMap.html -%}
+    {%- include leafletMap.html -%}
 
-      {%- include gallery.html -%}
-    
-    </div>
-
-  </div>  
+    {%- include gallery.html -%}
     
 </body>
 
