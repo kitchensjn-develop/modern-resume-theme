@@ -13,7 +13,7 @@
     
       {%- include navbar.html -%}
 
-      <div class="galleryContent" style="flex-grow: 1;">     <!--position: absolute; top: 50px; bottom: 0; width: 100%; z-index: -1;">-->
+      <div id="galleryContent" style="flex-grow: 1;">     <!--position: absolute; top: 50px; bottom: 0; width: 100%; z-index: -1;">-->
 
         {%- include leafletMap.html -%}
 
@@ -24,5 +24,10 @@
     </div>
     
 </body>
+  
+<script>
+var height = document.getElementById("navbar").offsetHeight;
+document.getElementById("galleryContent").style.marginTop = height + 'px';
+</script>
 
 </html>
