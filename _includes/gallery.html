@@ -732,7 +732,7 @@
         },
 				change: function() {
 					console.log(this.items.length);
-          $('.slick-slider').slick('slickGoTo', (this.index-2)%(this.items.length/2));
+          $('.slick-slider').slick('slickGoTo', (this.index-2)%((this.items.length-2)/2));
         }
 			}
     });
