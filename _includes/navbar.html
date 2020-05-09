@@ -40,9 +40,6 @@
       float: right;
       display: block;
     }
-    .content {
-      top = 53px;
-    }
   }
 
   @media screen and (max-width: 768px) {
@@ -92,7 +89,9 @@
     } else {
       content.style.top = "53px";
     }
-    
+    if (screen.width <= 768) {
+      content.style.top = "53px";
+    }
   }
 </script>
 
