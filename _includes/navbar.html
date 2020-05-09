@@ -41,7 +41,13 @@
       display: block;
     }
   }
-
+  
+  @media screen and (min-width: 769px) {
+    .content {
+      top: 53px;
+    }
+  }
+  
   @media screen and (max-width: 768px) {
     .topnav.responsive {position: relative;}
     .topnav.responsive .icon {
@@ -87,9 +93,6 @@
     if (content.style.top === "53px") {
       content.style.top = "162px";
     } else {
-      content.style.top = "53px";
-    }
-    if (screen.width <= 768) {
       content.style.top = "53px";
     }
   }
