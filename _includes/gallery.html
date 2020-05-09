@@ -731,7 +731,8 @@
           $('.slick-slider').slick('slickPlay');
         },
 				change: function() {
-          $('.slick-slider').slick('slickGoTo', this.index);
+					console.log(this.index);
+          $('.slick-slider').slick('slickGoTo', this.index-2);
         }
 			}
     });
