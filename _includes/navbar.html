@@ -90,5 +90,10 @@
       content.style.top = "53px";
     }
   }
+  window.addEventListener('resize', function(event){
+    if (window.innerWidth > 768) {
+      document.getElementById("galleryContent").style.top = "53px";
+    }
+  });
 </script>
 
