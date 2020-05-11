@@ -2,6 +2,7 @@
 <html lang="{{ page.lang | default: site.lang | default: 'en' }}">
 
 {%- include head.html -%}
+
 <head>
 <title>James Kitchens | National Parks Gallery</title>
 </head>
@@ -10,21 +11,21 @@
   
 </style>
   
-<body class="{% if site.darkmode == true and site.darkmode != 'never' %}dark{% endif %}" style="overflow: hidden;">
+<body class="{% if site.darkmode == true and site.darkmode != 'never' %}dark{% endif %}" style="overflow: hidden">
   
     {%- include preload.html -%}
     
     {%- include head_NPG.html -%}
     
-      {%- include navbar.html -%}
-      
-      <div id="galleryContent" class="content" style="position: absolute; top: 53px; bottom: 0; width: 100%;">
+    {%- include navbar.html -%}
+    
+    <div id="galleryContent" class="content" style="position: absolute; top: 53px; bottom: 0; width: 100%;">
 
-        {%- include leafletMap.html -%}
+      {%- include leafletMap.html -%}
 
-        {%- include gallery.html -%}
+      {%- include gallery.html -%}
 
-      </div>
+    </div>
     
 </body>
 
