@@ -36,11 +36,6 @@
     background-color: #333;
     transition: opacity 1s ease;
   }
-  
-  .topnav-loading-finish {
-    opacity: 0;
-    pointer-events: none;
-  }
 
   .topnav-loading a {
     float: left;
@@ -155,6 +150,8 @@
 <script>
   window.addEventListener('load', () => {
     const preload = document.querySelector(".preload");
-    preload.classList.add('preload-finish');
+    preload.classList.add("preload-finish");
+    const preload-navbar = document.querySelector(".topnav-loading");
+    preload-navbar.classList.add("preload-finish");
   });
 </script>
