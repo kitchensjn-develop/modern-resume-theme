@@ -38,6 +38,19 @@
 </div>
 
 <script>
+  var something = (function() {
+    var executed = false;
+    return function() {
+      if (!executed) {
+        executed = true;
+        const navbar = document.querySelector(".icon");
+        navbar.classList.add("inactiveLink");
+      }
+    };
+  })();
+  
+  something();
+  
   window.addEventListener('load', () => {
     const preload = document.querySelector(".preload");
     preload.classList.add("preload-finish");
