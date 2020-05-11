@@ -43,7 +43,7 @@
     return function() {
       if (!executed) {
         executed = true;
-        var navbarItems = document.getElementById("myTopnav").querySelectorAll(".example");
+        var navbarItems = document.getElementById("myTopnav").querySelectorAll("a");
         console.log(navbarItems);
         navbarItems.forEach(function(anchor) {
           anchor.classList.add("inactiveLink");
