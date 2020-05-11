@@ -96,7 +96,7 @@
   }
 </style>
 
-<div class="topnav" id="myTopnav" style="top:0px;">
+<div class="topnav" id="myTopnav-loading" style="top:0px;">
   <a href="/" style="padding:7px 16px;">
     <img src="{{ '/assets/JK_logo.png' | relative_url }}" alt="JK_logo" style="height:39px;">
   </a>
@@ -105,14 +105,14 @@
   <!--<a href="#projects">Projects</a>-->
   <a href="national-parks-gallery">National Parks Gallery</a>
   <!--<a href="#contact">Contact</a>-->
-  <a href="javascript:void(0);" class="icon" onclick="hamburger()">
+  <a href="javascript:void(0);" class="icon inactiveLink" onclick="hamburger()">
     <i class="fa fa-bars"></i>
   </a>
 </div>
 
 <script>
   function hamburger() {
-    var x = document.getElementById("myTopnav");
+    var x = document.getElementById("myTopnav-loading");
     if (x.className === "topnav") {
       x.className += " responsive";
     } else {
@@ -128,7 +128,7 @@
     }
   }
   window.addEventListener('resize', function(event){
-    var x = document.getElementById("myTopnav");
+    var x = document.getElementById("myTopnav-loading");
     var content = document.getElementById("van");
     if (content) {
       if (window.innerWidth > 768) {
