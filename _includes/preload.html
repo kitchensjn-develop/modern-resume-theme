@@ -44,7 +44,8 @@
       if (!executed) {
         executed = true;
         var navbarItems = document.getElementById("myTopnav").querySelectorAll(".example");
-        highlightedItems.forEach(function(anchor) {
+        console.log(navbarItems);
+        navbarItems.forEach(function(anchor) {
           anchor.classList.add("inactiveLink");
         });
         //const navbar = document.querySelector(".icon");
