@@ -31,13 +31,13 @@
     pointer-events: none;
   }
   
-  .topnav-loading {
+  .navbarloading {
     overflow: hidden;
     background-color: #333;
     transition: opacity 1s ease;
   }
 
-  .topnav-loading a {
+  .navbarloading a {
     float: left;
     display: block;
     color: #BBBBBB;
@@ -47,7 +47,7 @@
     font-size: 17px;
   }
 
-  .topnav-loading a:hover {
+  .navbarloading a:hover {
     color: #fff;
   }
 
@@ -57,47 +57,47 @@
   }
   
   /*  
-  .topnav-loading a.active {
+  .navbarloading a.active {
     background-color: #4CAF50;
     color: white;
   }
   */
 
-  .topnav-loading .icon {
+  .navbarloading .icon {
     display: none;
   }
   
   @media screen and (max-width: 768px) {
-    .topnav-loading a:not(:first-child) {display: none;}
-    .topnav-loading a.icon {
+    .navbarloading a:not(:first-child) {display: none;}
+    .navbarloading a.icon {
       float: right;
       display: block;
     }
   }
   
   @media screen and (max-width: 768px) {
-    .topnav-loading.responsive {position: relative;}
-    .topnav-loading.responsive .icon {
+    .navbarloading.responsive {position: relative;}
+    .navbarloading.responsive .icon {
       position: absolute;
       right: 0;
       top: 0;
     }
-    .topnav-loading.responsive a {
+    .navbarloading.responsive a {
       float: none;
       display: block;
       text-align: left;
     }
-    .topnav-loading.responsive a:not(.icon):hover {
+    .navbarloading.responsive a:not(.icon):hover {
       background-color: #fff;
       color: #333;
     }
-    .topnav-loading.responsive {
+    .navbarloading.responsive {
       border-bottom: 3px solid #333;
     }
   }
 </style>
 
-<div class="topnav-loading" id="myTopnav-loading" style="top:0px;">
+<div class="navbarloading" id="navbarLoading" style="top:0px;">
   <a href="/" style="padding:7px 16px;">
     <img src="{{ '/assets/JK_logo.png' | relative_url }}" alt="JK_logo" style="height:39px;">
   </a>
@@ -113,11 +113,11 @@
 
 <script>
   function hamburger() {
-    var x = document.getElementById("myTopnav-loading");
-    if (x.className === "topnav-loading") {
+    var x = document.getElementById("navbarLoading");
+    if (x.className === "navbarloading") {
       x.className += " responsive";
     } else {
-      x.className = "topnav-loading";
+      x.className = "navbarloading";
     }
     var content = document.getElementById("van");
     if (content) {
@@ -129,12 +129,12 @@
     }
   }
   window.addEventListener('resize', function(event){
-    var x = document.getElementById("myTopnav-loading");
+    var x = document.getElementById("navbarLoading");
     var content = document.getElementById("van");
     if (content) {
       if (window.innerWidth > 768) {
         content.style.top = "53px";
-      } else if (x.className === "topnav-loading") {
+      } else if (x.className === "navbarloading") {
         content.style.top = "53px";  
       } else {
         content.style.top = "162px";
@@ -151,7 +151,7 @@
   window.addEventListener('load', () => {
     const preload = document.querySelector(".preload");
     preload.classList.add("preload-finish");
-    const navbar = document.querySelector(".topnav-loading");
+    const navbar = document.querySelector(".navbarloading");
     navbar.classList.add("preload-finish");
   });
 </script>
