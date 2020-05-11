@@ -89,6 +89,7 @@
     var content = document.getElementById("galleryContent");
     if (content) {
       if (content.style.top === "53px") {
+        console.log(document.getElementById("myTopnav").querySelectorAll("a").length * 53 + 3);
         content.style.top = (document.getElementById("myTopnav").querySelectorAll("a").length * 53 + 3).toString() + "px";
         //content.style.top = "162px";
       } else {
