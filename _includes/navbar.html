@@ -65,8 +65,11 @@
 </style>
 
 <div class="topnav" id="myTopnav">
-  <a href="" class="inactiveLink" style="color: #fff; font-weight: bold;">James Kitchens</a>
-  <a href="/modern-resume-theme">About</a>
+  <a href="/" style="padding:7px 16px;">
+    <img src="{{ '/assets/JK_logo.png' | relative_url }}" alt="JK_logo" style="height:39px;">
+  </a>
+  <!--<a href="" class="inactiveLink" style="color: #fff; font-weight: bold;">James Kitchens</a>-->
+  <a href="/">About Me</a>
   <!--<a href="#projects">Projects</a>-->
   <a href="national-parks-gallery">National Parks Gallery</a>
   <!--<a href="#contact">Contact</a>-->
@@ -84,21 +87,26 @@
       x.className = "topnav";
     }
     var content = document.getElementById("galleryContent");
-    if (content.style.top === "53px") {
-      content.style.top = "162px";
-    } else {
-      content.style.top = "53px";
+    if (content) {
+      if (content.style.top === "53px") {
+        content.style.top = "162px";
+      } else {
+        content.style.top = "53px";
+      }
     }
   }
   window.addEventListener('resize', function(event){
     var x = document.getElementById("myTopnav");
-    if (window.innerWidth > 768) {
-      document.getElementById("galleryContent").style.top = "53px";
-    } else if (x.className === "topnav") {
-      document.getElementById("galleryContent").style.top = "53px";  
-    } else {
-      document.getElementById("galleryContent").style.top = "162px";
-    }
+    var content = document.getElementById("galleryContent");
+    if (content) {
+      if (window.innerWidth > 768) {
+        content.style.top = "53px";
+      } else if (x.className === "topnav") {
+        content.style.top = "53px";  
+      } else {
+        content.style.top = "162px";
+      }
+    };
   });
 </script>
 
