@@ -10,7 +10,7 @@
   
 </style>
   
-<body class="{% if site.darkmode == true and site.darkmode != 'never' %}dark{% endif %}">
+<body class="{% if site.darkmode == true and site.darkmode != 'never' %}dark{% endif %}" style="overflow: hidden;">
   
     {%- include preload.html -%}
     
@@ -29,6 +29,8 @@
       </div>
   
     </div>
+    
+   <script src="{{ '/assets/NationalParksGallery/park_boundaries.js' | relative_url }}"></script>
     
 </body>
 
