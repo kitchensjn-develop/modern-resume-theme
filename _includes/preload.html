@@ -43,8 +43,12 @@
     return function() {
       if (!executed) {
         executed = true;
-        const navbar = document.querySelector(".icon");
-        navbar.classList.add("inactiveLink");
+        var navbarItems = document.getElementById("myTopnav").querySelectorAll(".example");
+        highlightedItems.forEach(function(anchor) {
+          anchor.classList.add("inactiveLink");
+        });
+        //const navbar = document.querySelector(".icon");
+        //navbar.classList.add("inactiveLink");
       }
     };
   })();
