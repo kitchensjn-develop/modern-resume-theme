@@ -97,15 +97,17 @@
   }
 </style>
 
+
+<!--
 <div class="navbarloading" id="navbarLoading" style="top:0px;">
   <a href="/" style="padding:7px 16px;">
     <img src="{{ '/assets/JK_logo.png' | relative_url }}" alt="JK_logo" style="height:39px;">
   </a>
-  <!--<a href="" class="inactiveLink" style="color: #fff; font-weight: bold;">James Kitchens</a>-->
+  <a href="" class="inactiveLink" style="color: #fff; font-weight: bold;">James Kitchens</a>
   <a href="/">A Me</a>
-  <!--<a href="#projects">Projects</a>-->
+  <a href="#projects">Projects</a>
   <a href="national-parks-gallery">National Parks Gallery</a>
-  <!--<a href="#contact">Contact</a>-->
+  <a href="#contact">Contact</a>
   <a href="javascript:void(0);" class="icon inactiveLink" onclick="hamburger()">
     <i class="fa fa-bars"></i>
   </a>
@@ -142,6 +144,8 @@
     };
   });
 </script>
+-->
+
 
 <div class="preload">
   <img class="van" src="{{ '/assets/national-parks-gallery-loading-symbol.png' | relative_url }}" alt="NPG_loading" width=100%>
@@ -151,7 +155,7 @@
   window.addEventListener('load', () => {
     const preload = document.querySelector(".preload");
     preload.classList.add("preload-finish");
-    const navbar = document.querySelector(".navbarloading");
-    navbar.classList.add("preload-finish");
+    //const navbar = document.querySelector(".navbarloading");
+    //navbar.classList.add("preload-finish");
   });
 </script>
