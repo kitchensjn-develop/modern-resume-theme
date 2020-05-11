@@ -89,8 +89,8 @@
     var content = document.getElementById("galleryContent");
     if (content) {
       if (content.style.top === "53px") {
-        console.log(document.getElementById("myTopnav").querySelectorAll("a").length * 53 + 3);
-        content.style.top = (document.getElementById("myTopnav").querySelectorAll("a").length * 53 + 3).toString() + "px";
+        console.log((document.getElementById("myTopnav").querySelectorAll("a").length - 1) * 53 + 3);
+        content.style.top = ((document.getElementById("myTopnav").querySelectorAll("a").length - 1) * 53 + 3).toString() + "px";
         //content.style.top = "162px";
       } else {
         content.style.top = "53px";
@@ -106,8 +106,7 @@
       } else if (x.className === "topnav") {
         content.style.top = "53px";  
       } else {
-        console.log(document.getElementById("myTopnav").querySelectorAll("a").length * 53 + 3);
-        content.style.top = (document.getElementById("myTopnav").querySelectorAll("a").length * 53 + 3).toString() + "px";
+        content.style.top = ((document.getElementById("myTopnav").querySelectorAll("a").length - 1) * 53 + 3).toString() + "px";
       }
     };
   });
