@@ -2,7 +2,6 @@
 <html lang="{{ page.lang | default: site.lang | default: 'en' }}">
 
 {%- include head.html -%}
-{%- include head_NPG.html -%}
 <head>
 <title>James Kitchens | National Parks Gallery</title>
 </head>
@@ -14,6 +13,8 @@
 <body class="{% if site.darkmode == true and site.darkmode != 'never' %}dark{% endif %}">
   
     {%- include preload.html -%}
+    
+    {%- include head_NPG.html -%}
     
     <div style="height: 100%;">
     
