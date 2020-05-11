@@ -8,6 +8,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: opacity 0.5s ease;
   }
   
   .van {
@@ -23,7 +24,18 @@
     }
   }
   
+  .preload-finish {
+    opacity: 0;
+    pointer-events: none;
+  }
 </style>
 <div class="preload">
   <img class="van" src="{{ '/assets/national-parks-gallery-loading-symbol.png' | relative_url }}" alt="NPG_loading" height=50%>
 </div>
+
+<script>
+  window.addEventListener('load', () => {
+    const preload = document.querySelector(".preload");
+    preload.classList.add('preload-finish');
+  });
+</script>
