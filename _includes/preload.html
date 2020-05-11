@@ -30,121 +30,7 @@
     opacity: 0;
     pointer-events: none;
   }
-  
-  .navbarloading {
-    overflow: hidden;
-    background-color: #333;
-    transition: opacity 1s ease;
-  }
-
-  .navbarloading a {
-    float: left;
-    display: block;
-    color: #BBBBBB;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 17px;
-  }
-
-  .navbarloading a:hover {
-    color: #fff;
-  }
-
-  .inactiveLink {
-    pointer-events: none;
-    cursor: default;
-  }
-  
-  /*  
-  .navbarloading a.active {
-    background-color: #4CAF50;
-    color: white;
-  }
-  */
-
-  .navbarloading .icon {
-    display: none;
-  }
-  
-  @media screen and (max-width: 768px) {
-    .navbarloading a:not(:first-child) {display: none;}
-    .navbarloading a.icon {
-      float: right;
-      display: block;
-    }
-  }
-  
-  @media screen and (max-width: 768px) {
-    .navbarloading.responsive {position: relative;}
-    .navbarloading.responsive .icon {
-      position: absolute;
-      right: 0;
-      top: 0;
-    }
-    .navbarloading.responsive a {
-      float: none;
-      display: block;
-      text-align: left;
-    }
-    .navbarloading.responsive a:not(.icon):hover {
-      background-color: #fff;
-      color: #333;
-    }
-    .navbarloading.responsive {
-      border-bottom: 3px solid #333;
-    }
-  }
 </style>
-
-
-<!--
-<div class="navbarloading" id="navbarLoading" style="top:0px;">
-  <a href="/" style="padding:7px 16px;">
-    <img src="{{ '/assets/JK_logo.png' | relative_url }}" alt="JK_logo" style="height:39px;">
-  </a>
-  <a href="" class="inactiveLink" style="color: #fff; font-weight: bold;">James Kitchens</a>
-  <a href="/">A Me</a>
-  <a href="#projects">Projects</a>
-  <a href="national-parks-gallery">National Parks Gallery</a>
-  <a href="#contact">Contact</a>
-  <a href="javascript:void(0);" class="icon inactiveLink" onclick="hamburger()">
-    <i class="fa fa-bars"></i>
-  </a>
-</div>
-
-<script>
-  function hamburger() {
-    var x = document.getElementById("navbarLoading");
-    if (x.className === "navbarloading") {
-      x.className += " responsive";
-    } else {
-      x.className = "navbarloading";
-    }
-    var content = document.getElementById("van");
-    if (content) {
-      if (content.style.top === "53px") {
-        content.style.top = "162px";
-      } else {
-        content.style.top = "53px";
-      }
-    }
-  }
-  window.addEventListener('resize', function(event){
-    var x = document.getElementById("navbarLoading");
-    var content = document.getElementById("van");
-    if (content) {
-      if (window.innerWidth > 768) {
-        content.style.top = "53px";
-      } else if (x.className === "navbarloading") {
-        content.style.top = "53px";  
-      } else {
-        content.style.top = "162px";
-      }
-    };
-  });
-</script>
--->
 
 
 <div class="preload">
@@ -155,7 +41,7 @@
   window.addEventListener('load', () => {
     const preload = document.querySelector(".preload");
     preload.classList.add("preload-finish");
-    //const navbar = document.querySelector(".navbarloading");
-    //navbar.classList.add("preload-finish");
+    const navbar = document.querySelector(".icon");
+    navbar.classList.remove("inactiveLink");
   });
 </script>
