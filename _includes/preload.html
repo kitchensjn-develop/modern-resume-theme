@@ -44,7 +44,6 @@
       if (!executed) {
         executed = true;
         var navbarItems = document.getElementById("myTopnav").querySelectorAll("a");
-        console.log(navbarItems);
         navbarItems.forEach(function(anchor) {
           anchor.classList.add("inactiveLink");
         });
@@ -59,7 +58,9 @@
   window.addEventListener('load', () => {
     const preload = document.querySelector(".preload");
     preload.classList.add("preload-finish");
-    const navbar = document.querySelector(".icon");
-    navbar.classList.remove("inactiveLink");
+    var navbarItems = document.getElementById("myTopnav").querySelectorAll("a");
+    navbarItems.forEach(function(anchor) {
+      anchor.classList.remove("inactiveLink");
+    });
   });
 </script>
