@@ -83,17 +83,17 @@
     var x = document.getElementById("myTopnav");
     if (x.className === "topnav") {
       x.className += " responsive";
+      document.getElementById("Logo").classList.add("inactiveLink");
     } else {
       x.className = "topnav";
+      document.getElementById("Logo").classList.remove("inactiveLink");
     }
     var content = document.getElementById("galleryContent");
     if (content) {
       if (content.style.top === "53px") {
         content.style.top = ((document.getElementById("myTopnav").querySelectorAll("a").length - 1) * 53 + 3).toString() + "px";
-        document.getElementById("Logo").classList.add("inactiveLink");
       } else {
         content.style.top = "53px";
-        document.getElementById("Logo").classList.remove("inactiveLink");
       }
     }
   }
