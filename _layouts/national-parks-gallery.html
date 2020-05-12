@@ -8,14 +8,22 @@
 </head>
 
 <body class="{% if site.darkmode == true and site.darkmode != 'never' %}dark{% endif %}" style="overflow: hidden">
-  
+    
+    <!--
     <style>
       #NationalParksGallery {
         color: #fff;
       }
     </style>
+    -->
     
     {%- include navbar.html -%}
+    
+    <script>
+      var activePage = document.getElementById("NationalParksGallery");
+      activePage.style.color = #fff;
+      activePage.classList.add("inactiveLink");
+    </script>
     
     {%- include preload.html -%}
     
