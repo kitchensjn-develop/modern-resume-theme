@@ -9,13 +9,13 @@
 
 <body class="{% if site.darkmode == true and site.darkmode != 'never' %}dark{% endif %}" style="overflow: hidden">
     
-    <!--
+    
     <style>
-      #NationalParksGallery {
-        color: #fff;
+      .inactiveLink {
+        pointer-events: none;
+        cursor: default;
       }
     </style>
-    -->
     
     {%- include navbar.html -%}
     
