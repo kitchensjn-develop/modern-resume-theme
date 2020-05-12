@@ -9,6 +9,12 @@
   
 <body class="{% if site.darkmode == true and site.darkmode != 'never' %}dark{% endif %}" style="overflow: scroll;">
   
+    <style>
+      #Projects {
+        color: #fff;
+      }
+    </style>
+    
     {%- include navbar.html -%}
     
     {%- include project-cards.html -%}

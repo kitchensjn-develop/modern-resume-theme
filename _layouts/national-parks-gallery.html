@@ -6,9 +6,15 @@
 <head>
 <title>James Kitchens | National Parks Gallery</title>
 </head>
-  
+
 <body class="{% if site.darkmode == true and site.darkmode != 'never' %}dark{% endif %}" style="overflow: hidden">
   
+    <style>
+      #NationalParksGallery {
+        color: #fff;
+      }
+    </style>
+    
     {%- include navbar.html -%}
     
     {%- include preload.html -%}
