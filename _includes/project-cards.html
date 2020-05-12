@@ -23,19 +23,51 @@
   .container {
     padding: 2px 16px;
   }
+  
+  .flex-container {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    border: 1px solid silver;
+    -ms-box-orient: horizontal;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -moz-flex;
+    display: -webkit-flex;
+    display: flex;
+  }
+  
+  .wrap    { 
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }  
+  
+  .flex-item {
+    background: tomato;
+    padding: 5px;
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    
+    line-height: 100px;
+    color: white;
+    font-weight: bold;
+    font-size: 2em;
+    text-align: center;
+  }
+  
 </style>
 
 
-<div class="cardGrid">
-  <ul class="flex-container wrap">
-    <li class="flex-item">
-      <div class="card">
-        <img src="{{ '/assets/NationalParksGallery/photos/Grand Canyon/DSC_9157.jpg' | relative_url }}" alt="Avatar" style="width:100%">
-        <div class="container">
-          <h4><b>TopoTable</b></h4> 
-          <p>Dynamic 3D Topographic Relief Table</p> 
-        </div>
+<ul class="flex-container wrap">
+  <li class="flex-item">
+    <div class="card">
+      <img src="{{ '/assets/NationalParksGallery/photos/Grand Canyon/DSC_9157.jpg' | relative_url }}" alt="Avatar" style="width:100%">
+      <div class="container">
+        <h4><b>TopoTable</b></h4> 
+        <p>Dynamic 3D Topographic Relief Table</p> 
       </div>
-    </li>
-  </ul>
-</div>
+    </div>
+  </li>
+</ul>
