@@ -65,7 +65,7 @@
 </style>
 
 <div class="topnav" id="myTopnav">
-  <a href="/" style="padding:7px 16px;">
+  <a id="Logo" href="/" style="padding:7px 16px;">
     <img src="{{ '/assets/JK_logo.png' | relative_url }}" alt="JK_logo" style="height:39px;">
   </a>
   <!--<a href="" class="inactiveLink" style="color: #fff; font-weight: bold;">James Kitchens</a>-->
@@ -89,11 +89,11 @@
     var content = document.getElementById("galleryContent");
     if (content) {
       if (content.style.top === "53px") {
-        console.log((document.getElementById("myTopnav").querySelectorAll("a").length - 1) * 53 + 3);
         content.style.top = ((document.getElementById("myTopnav").querySelectorAll("a").length - 1) * 53 + 3).toString() + "px";
-        //content.style.top = "162px";
+        document.getElementById("Logo").classList.add("inactiveLink");
       } else {
         content.style.top = "53px";
+        document.getElementById("Logo").classList.remove("inactiveLink");
       }
     }
   }
@@ -103,10 +103,13 @@
     if (content) {
       if (window.innerWidth > 768) {
         content.style.top = "53px";
+        document.getElementById("Logo").classList.remove("inactiveLink");
       } else if (x.className === "topnav") {
-        content.style.top = "53px";  
+        content.style.top = "53px";
+        document.getElementById("Logo").classList.remove("inactiveLink");
       } else {
         content.style.top = ((document.getElementById("myTopnav").querySelectorAll("a").length - 1) * 53 + 3).toString() + "px";
+        document.getElementById("Logo").classList.add("inactiveLink");
       }
     };
   });
