@@ -49,9 +49,10 @@ about_content: | # this will include new lines to allow paragraphs
   
   In January 2020, I moved to from Virginia to Pomona, California. I am excited to explore the West Coast!
 
-# Skills Section
-
 # Publications Section
+publications_conent: | # this will include new lines to allow paragraphs
+  Webb et al. (2017). (Molecular Genetic Influences on Normative and Problematic Alcohol Use in a Population-Based Sample of College Students)[Molecular Genetic Influences on Normative and Problematic Alcohol Use in a Population-Based Sample of College Students]. Frontiers in Genetics, 8
+
 
 # Projects Section
 projects_title: Selected Projects
