@@ -53,7 +53,6 @@ about_content: | # this will include new lines to allow paragraphs
 publications_content: | # this will include new lines to allow paragraphs
   Webb et al. (2017). [Molecular Genetic Influences on Normative and Problematic Alcohol Use in a Population-Based Sample of College Students](https://www.frontiersin.org/articles/10.3389/fgene.2017.00030/full){:target="_blank"}. *Frontiers in Genetics*, 8
 
-
 # Projects Section
 projects_title: Selected Projects
 
@@ -62,6 +61,16 @@ experience_title: Research Experience
 
 # Education Section
 # educaton_title: Education
+
+# Awards Section
+awards_content: | # this will include new lines to all paragraphs
+  **Community Engagement Honor Role**
+  **Excellence in Biology Award** 
+  **Pfaff Cup Finalist**
+  **Pugh Grant**
+  **Student Government Association Grant**
+  **Warren Wilson College Dean’s List**
+  **Warren Wilson College Honor Scholarship**
 
 # More Section
 more_title: Interests and Activities
