@@ -51,7 +51,7 @@ about_content: | # this will include new lines to allow paragraphs
 
 # Publications Section
 publications_conent: | # this will include new lines to allow paragraphs
-  Webb et al. (2017). (Molecular Genetic Influences on Normative and Problematic Alcohol Use in a Population-Based Sample of College Students)[Molecular Genetic Influences on Normative and Problematic Alcohol Use in a Population-Based Sample of College Students]. Frontiers in Genetics, 8
+  Webb et al. (2017). [Molecular Genetic Influences on Normative and Problematic Alcohol Use in a Population-Based Sample of College Students](https://www.frontiersin.org/articles/10.3389/fgene.2017.00030/full){:target="_blank"}. *Frontiers in Genetics*, 8
 
 
 # Projects Section
