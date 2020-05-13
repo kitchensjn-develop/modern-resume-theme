@@ -1,8 +1,8 @@
-<div class="container projects-container">
+<div class="container more-container">
   <h3>{{ site.awards_title | default: "Honors & Awards" }}</h3>
-  <!--
-  {% for project in site.data.projects %}
-    {% include {{ project.layout | default: 'left' | append: ".html" }} item=project %}
-  {% endfor %}
-  -->
+  <div class="row clearfix">
+    <div class="col-md-12">
+      {{ site.awards_content | strip | markdownify }}
+    </div>
+  </div>
 </div>
