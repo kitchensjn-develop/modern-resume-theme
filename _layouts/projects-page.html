@@ -10,15 +10,13 @@
 <body class="{% if site.darkmode == true and site.darkmode != 'never' %}dark{% endif %}" style="overflow: scroll;">
     
     {%- include navbar.html -%}
-    
-    <!--
+  
     <script>
       var activePage = document.getElementById("Projects");
       console.log(activePage);
       activePage.style.color = "#ffffff";
       activePage.classList.add("inactiveLink");
     </script>
-    -->
     
     {%- include project-cards.html -%}
     
