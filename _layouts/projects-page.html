@@ -22,6 +22,28 @@
     <div class="wrapper">
 
       {%- include project-cards.html -%}
+      
+      {%- include about.html -%}
+      
+      {%- include publications.html -%}
+
+      {%- if site.data.projects.size > 0 -%}
+        {%- include projects.html -%}
+      {%- endif -%}
+
+      {%- if site.data.experience.size > 0 -%}
+        {%- include experience.html -%}
+      {%- endif -%}
+
+      {%- if site.data.education.size > 0 -%}
+        {%- include education.html -%}
+      {%- endif -%}
+      
+      {%- include awards.html -%}
+
+      {%- if site.more_content -%}
+        {%- include more.html -%}
+      {%- endif -%}
 
     </div>
   </main>
