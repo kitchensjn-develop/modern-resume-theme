@@ -22,16 +22,22 @@
   <div class="col-xs-12 col-sm-8 col-md-9 col-print-12">
     <div class="details">
       {%- if include.item.name -%}<h4>{{ include.item.name }}</h4>{%- endif -%}
-      {%- if include.item.link -%}
-        {% include a.html href=include.item.link class="link" %}Demo</a>
-      {%- endif -%}
-      {%- if include.item.github -%}
-        <p class="no-print">
-          <a href="https://github.com/{{ include.item.github }}" target="_blank">
-            <i class="fa fa-github" title="{{ include.item.name }} Github link"></i>
-          </a>
-        </p>
-      {%- endif -%}  
+      <div class="col-xs-12 col-sm-4 col-print-12"></div>
+      <div class="col-xs-12 col-sm-2 col-print-12">
+        {%- if include.item.link -%}
+          {% include a.html href=include.item.link class="link" %}Demo</a>
+        {%- endif -%}
+      </div>
+      <div class="col-xs-12 col-sm-2 col-print-12">
+        {%- if include.item.github -%}
+          <p class="no-print">
+            <a href="https://github.com/{{ include.item.github }}" target="_blank">
+              <i class="fa fa-github" title="{{ include.item.name }} Github link"></i>
+            </a>
+          </p>
+        {%- endif -%} 
+      </div>
+      <div class="col-xs-12 col-sm-4 col-print-12"></div>
     </div>
     <div>
       {%- if include.item.quote -%}
