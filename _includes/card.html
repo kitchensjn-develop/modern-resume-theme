@@ -1,20 +1,47 @@
-<div class="row clearfix layout layout-top-middle" style="width:33%;"> <!--col-xs-12 col-sm-4 col-md-4 col-print-12-->
+<style>
+  .desc p {
+    margin: 0px;
+    text-align: center;
+  }
+  
+  .content .details {
+    padding: 10px 0px 10px 0px;
+  }
+  
+  .buttons {
+    width: 100%;
+    margin: 0 auto;
+    padding: 10px 20px 0px 20px;
+  }
+  
+  .inline_button {
+    display: inline-block;
+    width: calc(25% - 4px);
+    margin: 0 auto;
+  }
+</style>
+
+<div class="show clearfix layout layout-top-middle col-xs-12 col-sm-6 col-md-4 col-print-12">
   <div class="content">
-    <img src="{{ '/assets/NationalParksGallery/photos/Grand Canyon/DSC_9157.jpg' | relative_url }}" alt="Car" style="width:100%">
+    <span class="thumbnail-img" style="background-image: url({{ include.item.thumbnail | relative_url }})"></span>
     <div class="details">
       {%- if include.item.name -%}<h4>{{ include.item.name }}</h4>{%- endif -%}
-      {%- if include.item.link -%}
-        {% include a.html href=include.item.link class="link" %}Demo</a>
-      {%- endif -%}
-      {%- if include.item.github -%}
-        <p class="no-print">
-          <a href="https://github.com/{{ include.item.github }}" target="_blank">
-            <i class="fa fa-github" title="{{ include.item.name }} Github link"></i>
-          </a>
-        </p>
+      {%- if include.item.link or include.item.github -%}
+        <div class="buttons">
+          {%- if include.item.link -%}
+            {% include a.html href=include.item.link class="link inline_button" %}Demo</a>
+          {%- endif -%}
+          {%- if include.item.github -%}
+            <p class="no-print inline_button">
+              <a href="https://github.com/{{ include.item.github }}" target="_blank">
+                <i class="fa fa-github" title="{{ include.item.name }} Github link"></i>
+              </a>
+            </p>
+          {%- endif -%}
+        </div>
       {%- endif -%}
     </div>
-    <div>
+    <div class="desc">
       {%- if include.item.quote -%}
         <p class="quote">{{ include.item.quote }}</p>
       {%- endif -%}
