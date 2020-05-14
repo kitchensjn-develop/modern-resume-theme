@@ -9,10 +9,10 @@
   
 <body class="{% if site.darkmode == true and site.darkmode != 'never' %}dark{% endif %}">
   
-  <!--{%- include navbar.html -%}-->
+  {%- include navbar.html -%}
   
   <script>
-    var activePage = document.getElementById("AboutMe");
+    var activePage = document.getElementById("Projects");
     console.log(activePage);
     activePage.style.color = "#ffffff";
     activePage.classList.add("inactiveLink");
