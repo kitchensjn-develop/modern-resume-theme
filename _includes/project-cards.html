@@ -49,6 +49,16 @@
   }
 </style>
 
+
+<div class="container projects-container">
+  <!--<h3>{{ site.projects_title | default: "Projects" }}</h3>-->
+  {% for project in site.data.projects-cards %}
+    {% include {{ project.layout | default: 'left' | append: ".html" }} item=project %}
+  {% endfor %}
+</div>
+
+
+<!--
 <div class="row">
   <div class="column nature show">
     <div class="content">
@@ -116,3 +126,4 @@
     </div>
   </div>
 </div>
+-->
