@@ -49,7 +49,7 @@
   }
 </style>
 
-<div class="container projects-container rows">
+<div class="container projects-container">
   {% for project in site.data.cards %}
     {% include {{ project.layout | default: 'left' | append: ".html" }} item=project %}
   {% endfor %}
