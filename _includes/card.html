@@ -1,18 +1,16 @@
 <div class="column show">
   <div class="content">
     <img src="{{ '/assets/NationalParksGallery/photos/Grand Canyon/DSC_9157.jpg' | relative_url }}" alt="Car" style="width:100%">
-    <div class="details">
-      {%- if include.item.name -%}<h4>{{ include.item.name }}</h4>{%- endif -%}
-      {%- if include.item.link -%}
-        {% include a.html href=include.item.link class="link" %}Demo</a>
-      {%- endif -%}
-      {%- if include.item.github -%}
-        <p class="no-print">
-          <a href="https://github.com/{{ include.item.github }}" target="_blank">
-            <i class="fa fa-github" title="{{ include.item.name }} Github link"></i>
-          </a>
-        </p>
-      {%- endif -%}
-    </div>
+    {%- if include.item.name -%}<h4>{{ include.item.name }}</h4>{%- endif -%}
+    {%- if include.item.link -%}
+      {% include a.html href=include.item.link class="link" %}Demo</a>
+    {%- endif -%}
+    {%- if include.item.github -%}
+      <p class="no-print">
+        <a href="https://github.com/{{ include.item.github }}" target="_blank">
+          <i class="fa fa-github" title="{{ include.item.name }} Github link"></i>
+        </a>
+      </p>
+    {%- endif -%}
   </div>
 </div>
