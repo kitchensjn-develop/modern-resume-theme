@@ -1,7 +1,7 @@
 <div class="column show">
   <div class="content">
     <img src="{{ '/assets/NationalParksGallery/photos/Grand Canyon/DSC_9157.jpg' | relative_url }}" alt="Car" style="width:100%">
-    <div class="details">
+    <div class="details" style="text-align: center;">
       {%- if include.item.name -%}<h4>{{ include.item.name }}</h4>{%- endif -%}
       {%- if include.item.link -%}
         {% include a.html href=include.item.link class="link" %}Demo</a>
