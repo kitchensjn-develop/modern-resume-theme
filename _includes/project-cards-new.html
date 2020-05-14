@@ -1,5 +1,5 @@
 <div class="container projects-container">
-  {% for project in site.data.projects %}
+  {% for project in site.data.projects-cards %}
     {% include {{ project.layout | default: 'left' | append: ".html" }} item=project %}
   {% endfor %}
 </div>
