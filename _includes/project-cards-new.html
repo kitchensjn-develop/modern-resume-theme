@@ -1,15 +1,38 @@
 <style>
   .content {
-    box-shadow: 0 4px 8px 0 rgba(51,51,51,0.2);
+    //box-shadow: 0 4px 8px 0 rgba(51,51,51,0.2);
+    border: 1px solid #ccc;
+    border-radius: 50px;
+    transition: 0.3s;
+    color: #333333;
+    height: 250px;
+    text-align: center;
+    overflow: hidden;
+    background-color: white;
+    padding: 10px;
+    width: 250px;
+  }
+  
+  .descriptions {
+    //box-shadow: 0 4px 8px 0 rgba(51,51,51,0.2);
+    //border: 1px solid #ccc;
+    border-radius: 50px;
     transition: 0.3s;
     color: #333333;
     text-align: center;
-    height: 300px;
     overflow: hidden;
+    background-color: white;
+    padding: 10px;
+    width: 900px;
+    opacity: 0;
   }
   
+  //.descriptions > p {
+  //  text-align: left;
+  //}
+  
   .content:hover {
-    box-shadow: 0 8px 16px 0 rgba(51,51,51,0.2);
+    //box-shadow: 0 8px 16px 0 rgba(51,51,51,0.2);
   }
   
   .content:hover .gif-img {
@@ -19,50 +42,145 @@
   .content:hover .thumbnail-img {
     display: none;
   }
-  
-  .container.projects-container.rows {
-    padding: 8px 8px 30px 8px;
+
+  .desc p {
+    margin: 0px;
+    text-align: left;
   }
   
-  .rows {
-    max-width: 1000px;
-    margin: auto;
+  .content .details {
+    padding: 15px 0px 15px 0px;
+    text-align: center;
   }
   
-  /* Add padding BETWEEN each column */
-  .rows,
-  .rows > .column {
-    padding: 8px;
+  .details {
+    padding: 15px 0px 14px 0px;
   }
   
-  /* Create three equal columns that floats next to each other */
-  .column {
-    float: left;
-    width: 33.33%;
-    display: none; /* Hide all elements by default */
+  .buttons {
+    width: 100%;
+    height: 24px;
+    margin: 0 auto;
+    padding: 0px 20px 0px 20px;
   }
   
-  /* Clear floats after rows */ 
-  .rows:after {
-    content: "";
-    display: table;
-    clear: both;
+  .inline_button {
+    display: inline-block;
+    width: calc(25% - 4px);
+    margin: 0 auto;
   }
   
-  /* Content */
-  .content {
-    background-color: white;
-    padding: 10px;
+  .layout {
+    margin: 0px;
+    padding-top: 10px;
+    padding-bottom: 10px;
   }
   
-  /* The "show" class is added to the filtered elements */
-  .show {
-    display: block;
+  .slick-prev:before {
+    color: #333;
   }
+  
+  .slick-next:before {
+    color: #333;
+  }
+  
+  #project-card .slick-center {
+    box-shadow: 0 4px 8px 0 rgba(51,51,51,0.3);
+  }
+  
+  #project-card .slick-slide {
+    margin: 10px 10px;
+  }
+
+  
+  #project-descriptions .slick-center {
+    opacity: 1;
+  }
+  
+  
+  #project-descriptions .slick-slide {
+    margin: 10px 10px;
+  }
+  
+  @media screen and (max-width: 1000px) {
+    .descriptions {
+      width: 700px;
+    }
+  }
+  
+  @media screen and (max-width: 767px) {
+    .descriptions {
+      width: 450px;
+    }
+  }
+  
+  @media screen and (max-width: 500px) {
+    .descriptions {
+      width: 300px;
+    }
+  }
+
 </style>
 
-<div class="container projects-container rows">
+<div class="slick-slider" id="project-card">
   {% for project in site.data.cards %}
     {% include {{ project.layout | default: 'left' | append: ".html" }} item=project %}
   {% endfor %}
 </div>
+<div class="slick-descriptions" id="project-descriptions">
+  {% for project in site.data.cards %}
+    {% include {{ project.spice | default: 'project-descriptions' | append: ".html" }} item=project %}
+  {% endfor %}
+</div>
+
+<!--
+<p>The goal of the TopoTable Project is to create a dynamic 3D topographic relief table that is built with moveable pillars. Rather than constraining it to a single region, the motors within the TopoTable would allow it to seamlessly shift from one map to the next. I have developed the user interface for downloading and processing elevation data using Python, R, Leaflet, and Shiny. This application is hosted through shinyapps.io.</p>
+-->
+
+
+
+<script type="text/javascript">
+  
+  $(".slick-slider")
+    .slick({
+        dots: false,
+        infinite: true,
+        centerMode: true,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        variableWidth: true,
+        autoplay: false,
+        arrows: true,
+        pauseOnHover: false,
+        pauseOnFocus: false,
+        draggable: false,
+        initialSlide: 0,
+        lazyLoad: 'ondemand',
+    });
+    
+  $(".slick-descriptions")
+    .slick({
+        dots: false,
+        infinite: true,
+        centerMode: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        variableWidth: true,
+        autoplay: false,
+        arrows: false,
+        pauseOnHover: false,
+        pauseOnFocus: false,
+        draggable: false,
+        initialSlide: 0,
+        adaptiveHeight: true
+    });
+    
+  $('.slick-slider').on('beforeChange', function(event, slick, currentSlide, nextSlide){
+    $('.slick-descriptions').slick('slickGoTo', nextSlide);
+  });
+  
+  $(window).on('resize', function() {
+    $('.slick-descriptions').slick('slickGoTo', $('.slick-slider').slick('slickCurrentSlide'));
+  });
+  
+</script>

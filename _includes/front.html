@@ -1,0 +1,40 @@
+<div class="front-container intro-container">
+  {%- if site.about_profile_image -%}
+    <div class="col-xs-12 col-sm-4 col-md-4 no-print profile-info">
+      <span class="profile-img" style="background-image: url({{ site.about_profile_image | relative_url }})"></span>
+      <h1 style="text-align: center;">{{ site.name | escape }}</h1>
+      <h2 style="text-align: center; margin-bottom: 20px;">{{ site.title | escape }}</h2>
+      <ul class="icons no-print">
+        {% for link in site.additional_links %}
+          <li style="padding-left: 0px; padding-right: 3px;">
+            {% include a.html href=link.url class="button button--sacnite button--round-l"%}
+              <i class="{{ link.icon }}" title="{{ link.title | escape }}"></i>
+            </a>
+          </li>
+        {% endfor %}
+        {%- if site.github_username -%}
+          <li style="padding-left: 4.5px; padding-right: 4.5px;">
+            <a target="_blank" href="https://github.com/{{ site.github_username| cgi_escape | escape }}" class="button button--sacnite button--round-l">
+              <i class="fab fa-github" title="Github"></i>
+            </a>
+          </li>
+        {%- endif -%}
+        {%- if site.linkedin_username -%}
+          <li style="padding-left: 3px; padding-right: 0px;">
+            <a target="_blank" href="https://www.linkedin.com/in/{{ site.linkedin_username| cgi_escape | escape }}" class="button button--sacnite button--round-l">
+              <i class="fab fa-linkedin" title="Linkedin"></i>
+            </a>
+          </li>
+        {%- endif -%}
+      </ul>
+    </div>
+  {%- endif -%}
+  <div class="{{ 'col-xs-12 profile-description ' }}{%- if site.about_profile_image -%}col-sm-8 col-md-8 col-print-12{%- endif -%}" style="height: 100%;">
+    <div>
+      {{ site.about_content | strip | markdownify }}
+      <p style="text-align: center; padding-top: 30px;">{{ site.comp_skills | markdownify | remove: "<p>" | remove: "</p>" }}</p>
+      <p style="text-align: center;">{{ site.geospatial_skills | markdownify | remove: "<p>" | remove: "</p>" }}</p>
+      <p style="text-align: center;">{{ site.lab_skills | markdownify | remove: "<p>" | remove: "</p>" }}</p>
+    </div>
+  </div>
+</div>

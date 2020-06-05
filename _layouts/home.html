@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: 'en' }}">
+
+{%- include head.html -%}
+{%- include front_style.html -%}
+<head>
+<title>James Kitchens</title>
+</head>
+  
+  
+<body class="{% if site.darkmode == true and site.darkmode != 'never' %}dark{% endif %}">
+  
+  {%- include navbar.html -%}
+  
+  <script>
+    var activePage = document.getElementById("Home");
+    activePage.style.color = "#ffffff";
+    activePage.classList.add("inactiveLink");
+  </script>
+  
+  <div id="home" class="page">
+
+    {%- if jekyll.environment == 'production' and site.gtm -%}
+      {%- include gtm_body.html -%}
+    {%- endif -%}
+
+    {%- include front.html -%}
+    
+    <div class="arrow" style="position: absolute; left: 50%; bottom: 10px;">
+      <a href="javascript:void(0);" onclick="goToByScroll()">
+        <i class="fas fa-chevron-down fa-3x" style="color: #333333; transform: translate(-50%, -50%);"></i>
+      </a>
+    </div>
+    
+  </div>
+  <div id="projects" class="page" style="padding: 75px 50px 0px 50px;">
+    <h1 class="section-title">Projects</h1>
+    {%- include project-cards-new.html -%}
+  </div>
+  
+  <script>
+    function goToByScroll(id){
+        $('html,body').animate({scrollTop: $("#projects").offset().top},'slow');
+    }
+  </script>
+  
+</body>
+
+</html>

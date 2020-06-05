@@ -4,7 +4,7 @@ favicon: /assets/favicon.ico
 
 # Personal info
 name: James Kitchens
-title: Digital Resume
+title: Environmental Data Analyst
 email: kitchensjn@gmail.com
 website: www.james-kitchens.com
 
@@ -27,10 +27,10 @@ linkedin_username: james-kitchens-668825b2
 #orcid_username: 0000-0000-0000-0000
 
 # Additional icon links
-#additional_links:
-#- title: National Parks Gallery
-#  icon: fas fa-tree
-#  url: http://www.james-kitchens.com/national-parks-gallery
+additional_links:
+- title: Contact Me
+  icon: fas fa-envelope
+  url: http://www.james-kitchens.com/national-parks-gallery
 # - title: another link
 #   icon: font awesome brand icon name (eg. fa-twitter) (https://fontawesome.com/icons?d=gallery&s=brands&m=free)
 #   url: Link url (eg. https://google.com)
@@ -45,9 +45,18 @@ linkedin_username: james-kitchens-668825b2
 # about_title: About Me (Use this to override about section title)
 about_profile_image: assets/profilePicture.jpg
 about_content: | # this will include new lines to allow paragraphs
-  Hi, my name is James. I recently graduated from Warren Wilson College in Asheville, North Carolina, earning a BS in Biology and a BS in Chemistry. Throughout college and high school, I developed interests and skills in conservation genetics, human genomics, and statistical modeling. I enjoy creative programming and data visualizations, including developing applications in <mark>Python</mark> and <mark>Shiny</mark>.
+  Hi, my name is James. I recently graduated from Warren Wilson College in Asheville, North Carolina, earning a BS in Biology and a BS in Chemistry. Throughout college and high school, I developed interests and skills in conservation genetics, human genomics, and statistical modeling. I enjoy creative programming and data visualizations, including developing applications in Python and Shiny.
   
   In January 2020, I moved to from Virginia to Pomona, California. I am excited to explore the West Coast!
+comp_skills: | # this will include new lines to allow paragraphs
+  <mark>Python</mark> <mark>R</mark> <mark>Shiny</mark> <mark>HTML</mark> <mark>CSS</mark> <mark>Javascript</mark> <mark>Git</mark> <mark>SQLite</mark>
+
+geospatial_skills: | # this will include new lines to allow paragraphs
+  <mark>QGIS</mark> <mark>ArcGIS</mark> <mark>GRASS GIS</mark>
+
+lab_skills: | # this will include new lines to allow paragraphs
+  <mark>DNA Extraction</mark> <mark>PCR</mark> <mark>Fragment Analysis</mark> <mark>NMR</mark>
+  
 
 # Publications Section
 publications_content: | # this will include new lines to allow paragraphs
