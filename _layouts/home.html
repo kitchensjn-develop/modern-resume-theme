@@ -44,9 +44,15 @@
   
   <script>
     function goToProjects(id){
+        var x = document.getElementById("myTopnav");
+        x.className = "topnav";
+        document.getElementById("Logo").classList.remove("inactiveLink");
         $('html,body').animate({scrollTop: $("#projects").offset().top},'slow');
     }
     function goToContact(id){
+        var x = document.getElementById("myTopnav");
+        x.className = "topnav";
+        document.getElementById("Logo").classList.remove("inactiveLink");
         $('html,body').animate({scrollTop: $("#contact").offset().top},'slow');
     }
   </script>
