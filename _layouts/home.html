@@ -3,6 +3,7 @@
 
 {%- include head.html -%}
 {%- include front_style.html -%}
+{%- include contact_head.html -%}
 <head>
 <title>James Kitchens</title>
 </head>
@@ -27,20 +28,26 @@
     {%- include front.html -%}
     
     <div class="arrow" style="position: absolute; left: 50%; bottom: 10px;">
-      <a href="javascript:void(0);" onclick="goToByScroll()">
+      <a href="javascript:void(0);" onclick="goToProjects()">
         <i class="fas fa-chevron-down fa-3x" style="color: #333333; transform: translate(-50%, -50%);"></i>
       </a>
     </div>
     
   </div>
-  <div id="projects" class="page" style="padding: 75px 50px 0px 50px;">
+  <div id="projects" class="page">
     <h1 class="section-title">Projects</h1>
     {%- include project-cards-new.html -%}
   </div>
+  <div id="contact" class="page" style="position: relative;">
+    {%- include contact.html -%}
+  </div>
   
   <script>
-    function goToByScroll(id){
+    function goToProjects(id){
         $('html,body').animate({scrollTop: $("#projects").offset().top},'slow');
+    }
+    function goToContact(id){
+        $('html,body').animate({scrollTop: $("#contact").offset().top},'slow');
     }
   </script>
   

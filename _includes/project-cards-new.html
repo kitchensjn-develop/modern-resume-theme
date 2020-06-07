@@ -9,14 +9,13 @@
     text-align: center;
     overflow: hidden;
     background-color: white;
-    padding: 10px;
+    //padding: 0px;
     width: 250px;
   }
   
   .descriptions {
     //box-shadow: 0 4px 8px 0 rgba(51,51,51,0.2);
     //border: 1px solid #ccc;
-    border-radius: 50px;
     transition: 0.3s;
     color: #333333;
     text-align: center;
@@ -72,7 +71,7 @@
   
   .layout {
     margin: 0px;
-    padding-top: 10px;
+    padding-top: 0px;
     padding-bottom: 10px;
   }
   
@@ -102,6 +101,10 @@
     margin: 10px 10px;
   }
   
+  #projects {
+    padding: 75px 50px 0px 50px;
+  }
+  
   @media screen and (max-width: 1000px) {
     .descriptions {
       width: 700px;
@@ -110,13 +113,29 @@
   
   @media screen and (max-width: 767px) {
     .descriptions {
-      width: 450px;
+      width: 425px;
     }
   }
   
   @media screen and (max-width: 500px) {
     .descriptions {
-      width: 300px;
+      width: 370px;
+    }
+    #projects {
+      padding: 75px 15px 0px 15px;
+    }
+    .slick-next {
+      right: -2px;
+    }
+    .slick-prev {
+      left: -2px;
+      z-index: 10;
+    }
+    #project-card .slick-center {
+      opacity: 1;
+    }
+    .content {
+      opacity: 0;
     }
   }
 

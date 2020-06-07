@@ -198,6 +198,17 @@ body {
   }
 }
 
+.contact-container {
+  position: absolute;
+  left: 50%;
+  top: 54.2%;
+  transform: translate(-50%, -50%);
+
+  @media print {
+    margin-top: 20px;
+  }
+}
+
 .profile-info {
   padding-left: 7px;
 }
@@ -211,9 +222,20 @@ body {
   
   .page {
     width: 100%;
+    min-height: 100%;
   }
   
   .front-container {
+    width: 100%;
+    position: initial;
+    top: initial;
+    bottom: initial;
+    left: initial;
+    right: initial;
+    transform: initial;
+  }
+  
+  .contact-container {
     width: 100%;
     position: initial;
     top: initial;
@@ -229,7 +251,7 @@ body {
   
   .profile-info {
     padding-left: 15px;
-    padding-top: 100px;
+    padding-top: 75px;
     float: none;
   }
   
