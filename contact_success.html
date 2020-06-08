@@ -1,6 +1,81 @@
 <!DOCTYPE html>
 <html>
   <head>
+  <style>
+    h1, p, input{
+      font-family: Roboto, sans-serif;
+      margin: 5px;
+    }
+    
+    a {
+      text-decoration: none;
+      color: #333;
+    }
+    
+    a:hover {
+      text-decoration: underline;  
+    }
+    
+    body {
+      margin: 0px;
+    }
+  
+    .main {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      width: 100vw;
+      background: #333;
+    }
+    
+    .card {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      width: 65%;
+      max-width: 364px;
+      padding: 24px;
+      background: #fff;
+      color: #333;
+      border-radius: 50px;
+      text-align: center;
+    }
+    
+    .contact100-form-btn {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0 20px;
+        //min-width: 200px;
+        height: 30px;
+        border-radius: 2px;
+        background: #333;
+        font-family: Roboto, sans-serif;
+        font-size: 17px;
+        font-weight: 400;
+        color: #bbb;
+        -webkit-transition: all 0.4s;
+        -o-transition: all 0.4s;
+        -moz-transition: all 0.4s;
+        transition: all 0.4s;
+        border: 0px;
+        margin-top: 20px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .contact100-form-btn:hover {
+      color: #fff;
+      cursor: pointer;
+    }
+  </style>
   </head>
   <body>
     <div class="main">
@@ -10,9 +85,9 @@
         </div>
         <div class="body">
           <p> Your messge has been received.</p>
-          <p>
-            <a id="back-link" href="https://eloquent-jennings-ed9245.netlify.app/">← Back to our site</a>
-          </p>
+          <form action="https://eloquent-jennings-ed9245.netlify.app/">
+              <input class="contact100-form-btn" type="submit" value="Return to Site" />
+          </form>
         </div>
       </div>
     </div>
