@@ -78,6 +78,11 @@
   .slick-prev:before {
     color: #333;
   }
+
+  *:focus {
+    outline: 0;
+    outline: none;
+  }
   
   .slick-next:before {
     color: #333;
@@ -200,6 +205,14 @@
   
   $(window).on('resize', function() {
     $('.slick-descriptions').slick('slickGoTo', $('.slick-slider').slick('slickCurrentSlide'));
+  });
+  
+  $('.slick-slider').on('click', '.slick-slide', function (e) {
+    e.stopPropagation();
+    var index = $(this).data("slick-index");
+    if ($('.slick-slider').slick('slickCurrentSlide') !== index) {
+      $('.slick-slider').slick('slickGoTo', index);
+    }
   });
   
 </script>
