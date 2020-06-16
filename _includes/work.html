@@ -148,47 +148,61 @@
     e.preventDefault();
     $('.timeline_desc').removeClass('show_desc');
     $('#washington_desc').addClass('show_desc');
+    goToTimelineDescs();
   });
   
   $('#nasa_mark').click(function(e) {
     e.preventDefault();
     $('.timeline_desc').removeClass('show_desc');
     $('#nasa_desc').addClass('show_desc');
+    goToTimelineDescs();
   });
   
   $('#asu_mark').click(function(e) {
     e.preventDefault();
     $('.timeline_desc').removeClass('show_desc');
     $('#asu_desc').addClass('show_desc');
+    goToTimelineDescs();
   });
   
   $('#wisc_mark').click(function(e) {
     e.preventDefault();
     $('.timeline_desc').removeClass('show_desc');
     $('#wisc_desc').addClass('show_desc');
+    goToTimelineDescs();
   });
   
   $('#wwcgenetics_mark').click(function(e) {
     e.preventDefault();
     $('.timeline_desc').removeClass('show_desc');
     $('#wwcgenetics_desc').addClass('show_desc');
+    goToTimelineDescs();
   });
   
   $('#wwcsum_mark').click(function(e) {
     e.preventDefault();
     $('.timeline_desc').removeClass('show_desc');
     $('#wwcsum_desc').addClass('show_desc');
+    goToTimelineDescs();
   });
   
   $('#auto_mark').click(function(e) {
     e.preventDefault();
     $('.timeline_desc').removeClass('show_desc');
     $('#auto_desc').addClass('show_desc');
+    goToTimelineDescs();
   });
   
   $('#vipbg_mark').click(function(e) {
     e.preventDefault();
     $('.timeline_desc').removeClass('show_desc');
     $('#vipbg_desc').addClass('show_desc');
+    goToTimelineDescs();
   });
+  
+  function goToTimelineDescs(id){
+    if (window.innerWidth < 992) {
+      $('html,body').animate({scrollTop: $(".timeline_descs").offset().top},'slow');
+    };
+  }
 </script>
