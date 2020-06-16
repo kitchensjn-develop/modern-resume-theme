@@ -37,6 +37,10 @@
     display: none;
   }
   
+  .timeline_descs {
+    height: 475px;
+  }
+  
   @media screen and (max-width: 991px) {
     .timeline_desc {
       position: relative;
@@ -45,7 +49,8 @@
       padding: 0px;
     }
     .timeline_descs {
-      padding-top: 100px;
+      padding-top: 50px;
+      height: auto;
     }
   }
   .show_desc {
@@ -86,7 +91,7 @@
     <h4 style="padding-top: 20px;">2014</h4>
   </div>
 </div>
-<div class="col-md-6 timeline_descs" style="text-align: center; height: 475px;">
+<div class="col-md-6 timeline_descs" id="desc_section" style="text-align: center;">
   <div id="washington_desc" class="timeline_desc show_desc">
     <h2 style="font-weight: bold;">University of Washington's Visualization Studies Research Studio</h2>
     <h2>Research Intern</h2>
@@ -202,7 +207,9 @@
   
   function goToTimelineDescs(id){
     if (window.innerWidth < 992) {
-      $('html,body').animate({scrollTop: $(".timeline_descs").offset().top},'slow');
+      console.log($(".timeline_descs").offset().top);
+      console.log($(".timeline_descs")[0].scrollHeight);
+      $('html,body').animate({scrollTop: $(".timeline_descs").offset().top - 305},'slow');
     };
   }
 </script>
