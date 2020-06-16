@@ -1,0 +1,183 @@
+<style>
+  .timeline_mark {
+    background-color: #333333;
+    border: 2px solid #333333;
+    width: 10px; 
+    border-radius: 5px; 
+    position: absolute;
+  }
+  .timeline_mark:hover {
+    background-color: #AAD3DF;
+    border: 2px solid #AAD3DF;
+    cursor: pointer;
+  }
+  .high_mark {
+    background-color: #AAD3DF;
+    border: 2px solid #AAD3DF;
+  }
+  .timeline_trail {
+    border: 2px solid #333333;
+    width: 10px; 
+    border-radius: 5px; 
+    position: absolute;
+    background: repeating-linear-gradient(
+      45deg,
+      #333333,
+      #333333 3px,
+      #ffffff 3px,
+      #ffffff 6px
+    );
+  }
+  
+  .desc {
+    position: absolute;
+    top: 50%;
+    transform: translate(0%, -50%);
+    padding-right: 17%;
+    display: none;
+  }
+  
+  .show_desc {
+    display: block;
+  }
+</style>
+
+<!--<div style="position: absolute; top: 55%; left: 10%; transform: translate(0%, -50%); width: 345px; height: 475px;">-->
+<div class="col-md-6" style="height: 475px;">
+  <div style="text-align: center; width: 100%; position: relative;">
+    <h4 style="padding-bottom: 20px;">Present</h4>
+  </div>
+  <div style="position: relative; left: 50%; transform: translate(-50%, 0%); width: 100%; height: 370px;">
+    <div style="position: absolute; left: 50%; transform: translate(-50%, 0%); width: 100%; max-width: 345px; height: 100%;">
+      <h5 class="timeline_name" style="position: absolute; width: auto; max-width: 200px; top: 1px; left: 65px; text-align: right;">University of Washington</h5>
+      <h5 class="timeline_name" style="position: absolute; width: auto; max-width: 200px; top: 21px; left: 12px; text-align: right;">NASA Jet Propulsion Laboratory</h5>
+      <h5 class="timeline_name" style="position: absolute; width: auto; max-width: 150px; top: 57px; right: 5px; text-align: left;">Arizona State University</h5>
+      <h5 class="timeline_name" style="position: absolute; width: auto; max-width: 150px; top: 110px; right: 0px; text-align: left;">University of Wisconsin - La Crosse</h5>
+      <h5 class="timeline_name" style="position: absolute; width: auto; max-width: 150px; top: 90px; left: 10px; text-align: right;">WWC Genetics and Plant Physiology Laboratory</h5>
+      <h5 class="timeline_name" style="position: absolute; width: auto; max-width: 150px; top: 177px; right: 32px; text-align: left;">WWC Summer Internship</h5>
+      <h5 class="timeline_name" style="position: absolute; width: auto; max-width: 150px; top: 205px; left: 52px; text-align: right;">WWC Autoshop</h5>
+      <h5 class="timeline_name" style="position: absolute; width: auto; max-width: 150px; top: 240px; left: 30px; text-align: right;">Appalachian Trail</h5>
+      <h5 class="timeline_name" style="position: absolute; width: auto; max-width: 150px; top: 295px; right: 52px; text-align: left;">Virginia Institute for Psychiatric and Behavioral Genetics</h5>
+    </div>
+    <div style="position: absolute; left: 50%; transform: translate(-50%, 0%); width: 98px; height: 100%;">
+      <div id="washington_mark" class="timeline_mark high_mark" style="height: 20px; top:0px; left: 88px;"></div>
+      <div id="nasa_mark" class="timeline_mark" style="height: 20px; top:20px; left: 77px;"></div>
+      <div id="asu_mark" class="timeline_mark" style="height: 20px; top:55px; left: 66px;"></div>
+      <div id="wisc_mark" class="timeline_mark" style="height: 20px; top:115px; left: 55px;"></div>
+      <div id="wwcgenetics_mark" class="timeline_mark" style="height: 135px; top:40px; left: 44px;"></div>
+      <div id="wwcsum_mark" class="timeline_mark" style="height: 20px; top:175px; left: 33px;"></div>
+      <div id="auto_mark" class="timeline_mark" style="height: 40px; top:195px; left: 22px;"></div>
+      <div id="trail_mark" class="timeline_trail" style="height: 30px; top:235px; left: 11px;"></div>
+      <div id="vipbg_mark" class="timeline_mark" style="height: 105px; top:265px;"></div>
+    </div>
+  </div>
+  <div style="text-align: center; width: 100%; position: relative;">
+    <h4 style="padding-top: 20px;">2014</h4>
+  </div>
+</div>
+<div class="col-md-6" style="text-align: center; height: 475px;">
+  <div id="washington_desc" class="desc show_desc">
+    <h2 style="font-weight: bold;">University of Washington's Visualization Studies Research Studio</h2>
+    <h2>Research Intern</h2>
+    <h4 style="margin-bottom: 15px;">April 2020 - Present</h4>
+    <p>Lorem impsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+  </div>
+  <div id="nasa_desc" class="desc">
+    <h2 style="font-weight: bold;">Science Systems and Applications, Inc.</h2>
+    <h2>NASA Develop Intern - Jet Propulsion Laboratory</h2>
+    <h4 style="margin-bottom: 15px;">January 2020 - April 2020</h4>
+    <p>Lorem impsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+  </div>
+  <div id="asu_desc" class="desc">
+    <h2 style="font-weight: bold;">Arizona State University's Mathematical and Theoretical Biology Insitute</h2>
+    <h2>Summer Research Intern</h2>
+    <h4 style="margin-bottom: 15px;">June 2019 - August 2019</h4>
+    <p>Lorem impsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+  </div>
+  <div id="wisc_desc" class="desc">
+    <h2 style="font-weight: bold;">University of Wisconsin - La Crosse</h2>
+    <h2>Summer Research Intern</h2>
+    <h4 style="margin-bottom: 15px;">May 2018 - August 2018</h4>
+    <p>Lorem impsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+  </div>
+  <div id="wwcgenetics_desc" class="desc">
+    <h2 style="font-weight: bold;">Warren Wilson College's Genetics and Plant Physiology Laboratory</h2>
+    <h2>Research Assistant</h2>
+    <h4 style="margin-bottom: 15px;">August 2017 - December 2019</h4>
+    <p>Lorem impsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+  </div>
+  <div id="wwcsum_desc" class="desc">
+    <h2 style="font-weight: bold;">Warren Wilson College's CEREUS Project</h2>
+    <h2>Summer Research Intern</h2>
+    <h4 style="margin-bottom: 15px;">May 2017 - August 2017</h4>
+    <p>Lorem impsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+  </div>
+  <div id="auto_desc" class="desc">
+    <h2 style="font-weight: bold;">Warren Wilson College's Autoshop and Motorpool Crew</h2>
+    <h2>Mechanic</h2>
+    <h4 style="margin-bottom: 15px;">August 2016 - May 2017</h4>
+    <p>Lorem impsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+  </div>
+  <div id="vipbg_desc" class="desc">
+    <h2 style="font-weight: bold;">Virginia Institute for Psychiatric and Behavioral Genetics</h2>
+    <h2>Research Assistant</h2>
+    <h4 style="margin-bottom: 15px;">May 2014 - February 2016</h4>
+    <p>Lorem impsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+  </div>
+</div>
+
+<script>
+  var $marks = $('.timeline_mark').click(function(e) {
+    e.preventDefault();
+    $marks.removeClass('high_mark');
+    $(this).addClass('high_mark');
+  });
+  
+  $('#washington_mark').click(function(e) {
+    e.preventDefault();
+    $('.desc').removeClass('show_desc');
+    $('#washington_desc').addClass('show_desc');
+  });
+  
+  $('#nasa_mark').click(function(e) {
+    e.preventDefault();
+    $('.desc').removeClass('show_desc');
+    $('#nasa_desc').addClass('show_desc');
+  });
+  
+  $('#asu_mark').click(function(e) {
+    e.preventDefault();
+    $('.desc').removeClass('show_desc');
+    $('#asu_desc').addClass('show_desc');
+  });
+  
+  $('#wisc_mark').click(function(e) {
+    e.preventDefault();
+    $('.desc').removeClass('show_desc');
+    $('#wisc_desc').addClass('show_desc');
+  });
+  
+  $('#wwcgenetics_mark').click(function(e) {
+    e.preventDefault();
+    $('.desc').removeClass('show_desc');
+    $('#wwcgenetics_desc').addClass('show_desc');
+  });
+  
+  $('#wwcsum_mark').click(function(e) {
+    e.preventDefault();
+    $('.desc').removeClass('show_desc');
+    $('#wwcsum_desc').addClass('show_desc');
+  });
+  
+  $('#auto_mark').click(function(e) {
+    e.preventDefault();
+    $('.desc').removeClass('show_desc');
+    $('#auto_desc').addClass('show_desc');
+  });
+  
+  $('#vipbg_mark').click(function(e) {
+    e.preventDefault();
+    $('.desc').removeClass('show_desc');
+    $('#vipbg_desc').addClass('show_desc');
+  });
+</script>

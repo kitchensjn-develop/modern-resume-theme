@@ -38,6 +38,10 @@
     <h1 class="section-title">Projects</h1>
     {%- include project-cards-new.html -%}
   </div>
+  <div id="work" class="page" style="position: relative;">
+    <h1 class="section-title" style="padding-bottom: 25px;">Work Experience</h1>
+    {%- include work.html -%}
+  </div>
   <div id="contact" class="page" style="position: relative;">
     {%- include contact.html -%}
   </div>
@@ -48,6 +52,12 @@
         x.className = "topnav";
         document.getElementById("Logo").classList.remove("inactiveLink");
         $('html,body').animate({scrollTop: $("#projects").offset().top},'slow');
+    }
+    function goToWork(id){
+        var x = document.getElementById("myTopnav");
+        x.className = "topnav";
+        document.getElementById("Logo").classList.remove("inactiveLink");
+        $('html,body').animate({scrollTop: $("#work").offset().top},'slow');
     }
     function goToContact(id){
         var x = document.getElementById("myTopnav");
