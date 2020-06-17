@@ -209,7 +209,7 @@
     if (window.innerWidth < 992) {
       console.log($(".timeline_descs").offset().top);
       console.log($(".timeline_descs")[0].scrollHeight);
-      $('html,body').animate({scrollTop: $(".timeline_descs").offset().top - 305},'slow');
+      $('html,body').animate({scrollTop: $(".timeline_descs").offset().top - $(".timeline_descs").height() / 2 - 53},'slow');
     };
   }
 </script>
