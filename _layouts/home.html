@@ -13,7 +13,7 @@
   
   {%- include navbar.html -%}
   
-  <div id="home" class="page">
+  <div id="home" class="page" style="background-color: #F8F8F8;">
 
     {%- if jekyll.environment == 'production' and site.gtm -%}
       {%- include gtm_body.html -%}
@@ -29,11 +29,11 @@
     
   </div>
   <div id="projects" class="page">
-    <h1 class="section-title">Projects</h1>
+    <h1 class="section-title" style="margin-bottom: 25px;">Projects</h1>
     {%- include project-cards-new.html -%}
   </div>
-  <div id="work" class="page" style="position: relative;">
-    <h1 class="section-title" style="padding-bottom: 25px;">Work Experience</h1>
+  <div id="work" class="page" style="position: relative; background-color: #F8F8F8;">
+    <h1 class="section-title" style="margin-bottom: 25px;">Work Experience</h1>
     {%- include work.html -%}
   </div>
   <div id="contact" class="page" style="position: relative;">
