@@ -9,15 +9,9 @@
 </head>
   
   
-<body class="{% if site.darkmode == true and site.darkmode != 'never' %}dark{% endif %}">
+<body class="{% if site.darkmode == true and site.darkmode != 'never' %}dark{% endif %}" onload="removeHash()">
   
   {%- include navbar.html -%}
-  
-  <script>
-    var activePage = document.getElementById("Home");
-    activePage.style.color = "#ffffff";
-    activePage.classList.add("inactiveLink");
-  </script>
   
   <div id="home" class="page">
 
@@ -47,6 +41,12 @@
   </div>
   
   <script>
+    function goToHome(id){
+        var x = document.getElementById("myTopnav");
+        x.className = "topnav";
+        document.getElementById("Logo").classList.remove("inactiveLink");
+        $('html,body').animate({scrollTop: $("#home").offset().top},'slow');
+    }
     function goToProjects(id){
         var x = document.getElementById("myTopnav");
         x.className = "topnav";
@@ -65,6 +65,34 @@
         document.getElementById("Logo").classList.remove("inactiveLink");
         $('html,body').animate({scrollTop: $("#contact").offset().top},'slow');
     }
+    
+    
+    $(window).on('scroll', function() {
+      var y_scroll_pos = window.pageYOffset;
+      var scroll_pos_test = 1000;             // set to whatever you want it to be
+  
+      if(y_scroll_pos >= 0){
+        $(".menuPage").removeClass("activePage");
+        var activePage = document.getElementById("Home");
+        activePage.classList.add("activePage");
+      }
+      if(y_scroll_pos > document.getElementById("projects").offsetTop - 53) {
+        $(".menuPage").removeClass("activePage");
+        var activePage = document.getElementById("Projects");
+        activePage.classList.add("activePage");
+      }
+      if(y_scroll_pos > document.getElementById("work").offsetTop - 53) {
+        $(".menuPage").removeClass("activePage");
+        var activePage = document.getElementById("Work");
+        activePage.classList.add("activePage");
+      }
+      if(y_scroll_pos > document.getElementById("contact").offsetTop - 53) {
+        $(".menuPage").removeClass("activePage");
+        var activePage = document.getElementById("Contact");
+        activePage.classList.add("activePage");
+      }
+    });
+    
   </script>
   
 </body>

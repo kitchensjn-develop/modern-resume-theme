@@ -1,7 +1,7 @@
 <div class="content layout">
-  <a href="#{{ include.item.id }}" class="projectdetails inactiveLink">
-    <span class="thumbnail-img" style="background-image: url({{ include.item.thumbnail | relative_url }});"></span>
-    <span class="gif-img" style="background-image: url({{ include.item.gif | relative_url }})"></span>
+  <a class="projectdetails inactiveLink" style="outline-style:none; text-decoration: none;">
+    <span class="thumbnail-img" style="outline-style:none; background-image: url({{ include.item.thumbnail | relative_url }});"></span>
+    <span class="gif-img" style="outline-style:none; background-image: url({{ include.item.gif | relative_url }})"></span>
     <div class="details">
       {%- if include.item.name -%}<p style="font-style: normal; font-weight: bold;">{{ include.item.name }}</p>{%- endif -%}
       {%- if include.item.link or include.item.github  or include.item.paper  or include.item.poster -%}
@@ -27,37 +27,3 @@
     </div>
   </a>
 </div>
-<!--
-<div class="clearfix layout layout-top-middle white-popup mfp-hide" id="{{ include.item.id }}">
-  <span class="thumbnail-img" style="height: 300px; background-image: url({{ include.item.thumbnail | relative_url }});"></span>
-  <div class="details">
-    {%- if include.item.name -%}<h4 style="font-style: normal; font-weight: bold;">{{ include.item.name }}</h4>{%- endif -%}
-    {%- if include.item.link or include.item.github  or include.item.paper or include.item.poster -%}
-      <div class="buttons">
-        {%- if include.item.link -%}
-          {% include a.html href=include.item.link class="link inline_button" %}Website</a>
-        {%- endif -%}
-        {%- if include.item.github -%}
-          <p class="no-print inline_button">
-            <a href="https://github.com/{{ include.item.github }}" target="_blank">
-              <i class="fa fa-github" title="{{ include.item.name }} Github link"></i>
-            </a>
-          </p>
-        {%- endif -%}
-        {%- if include.item.paper -%}
-          {% include a.html href=include.item.paper class="link inline_button" %}Paper</a>
-        {%- endif -%}
-        {%- if include.item.poster -%}
-          <a class="link inline_button" href="{{ include.item.poster }}" download>Poster</a>
-        {%- endif -%}
-      </div>
-    {%- endif -%}
-  </div>
-  <div class="desc">
-    {%- if include.item.quote -%}
-      <p class="quote">{{ include.item.quote }}</p>
-    {%- endif -%}
-    {{ include.item.description | strip | markdownify }}
-  </div>  
-</div>
--->

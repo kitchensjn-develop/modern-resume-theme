@@ -19,11 +19,6 @@
     text-decoration: none;
   }
   
-  .menuPage:visited {
-    color: #BBBBBB;
-    text-decoration: none;
-  }
-  
   .activePage:link {
     color: #FFFFFF;
     text-decoration: none;
@@ -125,11 +120,11 @@
     <img src="{{ '/assets/JK_logo.png' | relative_url }}" alt="JK_logo" style="height:39px;">
   </a>
   <!--<a href="" class="inactiveLink" style="color: #fff; font-weight: bold;">James Kitchens</a>-->
-  <a class="menuPage activePage" id="Home" href="javascript:void(0);" onclick="goToHome()">Home</a>
-  <a class="menuPage" id="Projects" href="javascript:void(0);" onclick="goToProjects()">Projects</a>
-  <a class="menuPage" id="Work" href="javascript:void(0);" onclick="goToWork()">Work</a>
-  <a class="menuPage" id="Contact" href="javascript:void(0);" onclick="goToContact()">Contact</a>
-  <a class="menuPage" id="NationalParksGallery" href="national-parks-gallery">National Parks Gallery</a>
+  <a class="menuPage" id="Home" href="/">Home</a>
+  <a class="menuPage" id="Projects" href="/#projects">Projects</a>
+  <a class="menuPage" id="Work" href="/#work">Work</a>
+  <a class="menuPage" id="Contact" href="/#contact">Contact</a>
+  <a class="menuPage activePage" id="NationalParksGallery" href="national-parks-gallery">National Parks Gallery</a>
   <a href="javascript:void(0);" class="menuBurger icon" onclick="hamburger()">
     <i class="fa fa-bars"></i>
   </a>
